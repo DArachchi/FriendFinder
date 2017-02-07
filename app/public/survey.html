@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>FriendFinder</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>Survey Questions</h1>
+		<hr>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title"></h3><h3><strong>About You</strong></h3>
+					</div>
+					<div class="panel-body">
+						<form method="POST" role="form">
+							<div class="form-group">
+								<label for="name">Name (Required)</label>
+								<input type="text" class="form-control" id="name" required="">
+							</div>
+							<div class="form-group">
+								<label for="photo">Link to Photo Image (Required)</label>
+								<input type="text" class="form-control" id="photo" required="">
+							</div>
+							<h3><strong>Question 1</strong></h3>
+							<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+<select data-placeholder="" class="chosen-select" id="q1" style="display: none;">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+<div class="chosen-container chosen-container-single" style="width: 156px;" title="" id="q1_chosen"><a class="chosen-single chosen-default"><span>Select an Option</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"><li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li><li class="active-result" data-option-array-index="2">2</li><li class="active-result" data-option-array-index="3">3</li><li class="active-result" data-option-array-index="4">4</li><li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li></ul></div></div>
+						</form>
+						<br>
+						<div class="text-center">
+							<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><span class="glyphicon glyphicon-upload"></span> Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
