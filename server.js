@@ -3,10 +3,12 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 var app = express();
+//var router = express.Router();
 var PORT = process.env.PORT || 8080;
 
 
-
+//var htmlRoutes = require("./app/routing/htmlRoutes.js");
+//var apiRoutes = require("./app/routing/apiRoutes.js");
 var data = require("./app/data/friends.js");
 var friendsList = data.object.friends;
 var userData;
@@ -31,6 +33,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+
+//app.use('/', htmlRoutes);
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "/app/public/home.html"));
 });
@@ -41,7 +45,7 @@ app.get("/survey", function(req, res) {
 
 
 app.get("/api/friends", function(req, res) {
-  res.json(friends);
+  res.json(friendsList);
 });
 
 app.post("/api/friends", function(req, res) {
